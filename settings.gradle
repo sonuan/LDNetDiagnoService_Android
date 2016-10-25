@@ -1,2 +1,2 @@
-include ':library'
+include ':library', ':library_email'
 include ':app'

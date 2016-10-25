@@ -1,5 +1,14 @@
 package com.netease.LDNetDiagnoService;
 
+import android.content.Context;
+import android.telephony.TelephonyManager;
+import android.text.TextUtils;
+
+import com.netease.LDNetDiagnoService.LDNetPing.LDNetPingListener;
+import com.netease.LDNetDiagnoService.LDNetSocket.LDNetSocketListener;
+import com.netease.LDNetDiagnoService.LDNetTraceRoute.LDNetTraceRouteListener;
+import com.netease.LDNetDiagnoUtils.LDNetUtil;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
@@ -14,15 +23,6 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import android.content.Context;
-import android.telephony.TelephonyManager;
-import android.text.TextUtils;
-
-import com.netease.LDNetDiagnoService.LDNetPing.LDNetPingListener;
-import com.netease.LDNetDiagnoService.LDNetSocket.LDNetSocketListener;
-import com.netease.LDNetDiagnoService.LDNetTraceRoute.LDNetTraceRouteListener;
-import com.netease.LDNetDiagnoUtils.LDNetUtil;
 
 /**
  * 网络诊断服务 通过对制定域名进行ping诊断和traceroute诊断收集诊断日志
@@ -172,10 +172,12 @@ public class LDNetDiagnoService extends
       _netSocker.isCConn = this._isUseJNICConn;// 设置是否启用C进行connected
       _isSocketConnected = _netSocker.exec(_dormain);
 
-      // 诊断ping信息, 同步过程
-      recordStepInfo("\n开始ping...");
       if (!(_isNetConnected && _isDomainParseOk && _isSocketConnected)) {// 联网&&DNS解析成功&&connect测试成功
-        _netPinger = new LDNetPing(this, 4);
+        // 诊断ping信息, 同步过程
+        recordStepInfo("\n开始ping...");
+        if (_netPinger == null) {
+          _netPinger = new LDNetPing(this, 4);
+        }
         recordStepInfo("ping...127.0.0.1");
         _netPinger.exec("127.0.0.1", false);
         recordStepInfo("ping本机IP..." + _localIp);
@@ -194,7 +196,7 @@ public class LDNetDiagnoService extends
         _netPinger = new LDNetPing(this, 4);
       }
       if (_netPinger != null) {
-        //recordStepInfo("ping..." + LDNetUtil.OPEN_IP);
+        //recordStepInfo("\nping..." + LDNetUtil.OPEN_IP);
         //_netPinger.exec(LDNetUtil.OPEN_IP, true);
       }
 
