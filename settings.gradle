@@ -1,2 +1,2 @@
-include ':lDNetDiagnoService_Android'
-include ':lDNetDiagnoServiceDemo_Android'
+include ':library'
+include ':app'

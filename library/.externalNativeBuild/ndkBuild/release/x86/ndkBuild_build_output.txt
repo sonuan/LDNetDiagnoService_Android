@@ -1,0 +1,7 @@
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/x86/lib*.so
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/x86/gdbserver
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/x86/gdb.setup
+mkdir -p /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/x86
+echo [x86] "Install        ": "libtracepath.so => /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/x86/libtracepath.so"
+install -p /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/obj/local/x86/libtracepath.so /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/x86/libtracepath.so
+/Volumes/work/android/android-ndk-r10e/toolchains/x86-4.8/prebuilt/darwin-x86_64/bin/i686-linux-android-strip --strip-unneeded  /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/x86/libtracepath.so

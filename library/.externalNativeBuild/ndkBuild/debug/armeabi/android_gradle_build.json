@@ -1,0 +1,41 @@
+{
+  "buildFiles": [
+    "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Android.mk",
+    "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Volumes/work/android/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDEBUG\u003d1 APP_PLATFORM\u003dandroid-5 NDK_OUT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "tracepath-debug-armeabi": {
+      "buildCommand": "/Volumes/work/android/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDEBUG\u003d1 APP_PLATFORM\u003dandroid-5 NDK_OUT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/lib /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/obj/local/armeabi/libtracepath.so",
+      "toolchain": "toolchain-armeabi",
+      "abi": "armeabi",
+      "artifactName": "tracepath",
+      "files": [
+        {
+          "src": "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Provider.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector\" \"-no-canonical-prefixes\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-mthumb\" \"-Os\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fno-strict-aliasing\" \"-finline-limit\u003d64\" \"-I/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni\" \"-DANDROID\" \"-Wno-sign-compare\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Volumes/work/android/android-ndk-r10e/platforms/android-5/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/miniTelnet.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector\" \"-no-canonical-prefixes\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-mthumb\" \"-Os\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fno-strict-aliasing\" \"-finline-limit\u003d64\" \"-I/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni\" \"-DANDROID\" \"-Wno-sign-compare\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Volumes/work/android/android-ndk-r10e/platforms/android-5/arch-arm/usr/include\""
+        },
+        {
+          "src": "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/tracepath.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector\" \"-no-canonical-prefixes\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-mthumb\" \"-Os\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fno-strict-aliasing\" \"-finline-limit\u003d64\" \"-I/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni\" \"-DANDROID\" \"-Wno-sign-compare\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Volumes/work/android/android-ndk-r10e/platforms/android-5/arch-arm/usr/include\""
+        }
+      ],
+      "output": "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/obj/local/armeabi/libtracepath.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi": {
+      "cCompilerExecutable": "/Volumes/work/android/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

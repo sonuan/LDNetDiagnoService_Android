@@ -1,0 +1,7 @@
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/mips/lib*.so
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/mips/gdbserver
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/mips/gdb.setup
+mkdir -p /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/mips
+echo [mips] "Install        ": "libtracepath.so => /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/mips/libtracepath.so"
+install -p /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/obj/local/mips/libtracepath.so /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/mips/libtracepath.so
+/Volumes/work/android/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-strip --strip-unneeded  /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/mips/libtracepath.so

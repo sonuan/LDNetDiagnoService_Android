@@ -1,0 +1,11 @@
+{
+  "buildFiles": [
+    "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Android.mk",
+    "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [],
+  "libraries": {},
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

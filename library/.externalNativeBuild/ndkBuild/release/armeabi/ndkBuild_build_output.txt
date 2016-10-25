@@ -1,0 +1,7 @@
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/armeabi/lib*.so
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/armeabi/gdbserver
+rm -f /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/armeabi/gdb.setup
+mkdir -p /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/armeabi
+echo [armeabi] "Install        ": "libtracepath.so => /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/armeabi/libtracepath.so"
+install -p /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/obj/local/armeabi/libtracepath.so /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/armeabi/libtracepath.so
+/Volumes/work/android/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/release/lib/armeabi/libtracepath.so

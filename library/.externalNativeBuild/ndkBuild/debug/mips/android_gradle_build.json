@@ -1,0 +1,41 @@
+{
+  "buildFiles": [
+    "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Android.mk",
+    "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Volumes/work/android/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Application.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d1 APP_PLATFORM\u003dandroid-9 NDK_OUT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "tracepath-debug-mips": {
+      "buildCommand": "/Volumes/work/android/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Application.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d1 APP_PLATFORM\u003dandroid-9 NDK_OUT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/lib /Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/obj/local/mips/libtracepath.so",
+      "toolchain": "toolchain-mips",
+      "abi": "mips",
+      "artifactName": "tracepath",
+      "files": [
+        {
+          "src": "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/Provider.c",
+          "flags": "\"-fpic\" \"-fno-strict-aliasing\" \"-finline-functions\" \"-ffunction-sections\" \"-funwind-tables\" \"-fmessage-length\u003d0\" \"-fno-inline-functions-called-once\" \"-fgcse-after-reload\" \"-frerun-cse-after-loop\" \"-frename-registers\" \"-no-canonical-prefixes\" \"-O2\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-funswitch-loops\" \"-finline-limit\u003d300\" \"-I/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni\" \"-DANDROID\" \"-Wno-sign-compare\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Volumes/work/android/android-ndk-r10e/platforms/android-9/arch-mips/usr/include\""
+        },
+        {
+          "src": "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/miniTelnet.c",
+          "flags": "\"-fpic\" \"-fno-strict-aliasing\" \"-finline-functions\" \"-ffunction-sections\" \"-funwind-tables\" \"-fmessage-length\u003d0\" \"-fno-inline-functions-called-once\" \"-fgcse-after-reload\" \"-frerun-cse-after-loop\" \"-frename-registers\" \"-no-canonical-prefixes\" \"-O2\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-funswitch-loops\" \"-finline-limit\u003d300\" \"-I/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni\" \"-DANDROID\" \"-Wno-sign-compare\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Volumes/work/android/android-ndk-r10e/platforms/android-9/arch-mips/usr/include\""
+        },
+        {
+          "src": "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni/tracepath.c",
+          "flags": "\"-fpic\" \"-fno-strict-aliasing\" \"-finline-functions\" \"-ffunction-sections\" \"-funwind-tables\" \"-fmessage-length\u003d0\" \"-fno-inline-functions-called-once\" \"-fgcse-after-reload\" \"-frerun-cse-after-loop\" \"-frename-registers\" \"-no-canonical-prefixes\" \"-O2\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-funswitch-loops\" \"-finline-limit\u003d300\" \"-I/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/src/main/jni\" \"-DANDROID\" \"-Wno-sign-compare\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/Volumes/work/android/android-ndk-r10e/platforms/android-9/arch-mips/usr/include\""
+        }
+      ],
+      "output": "/Volumes/work/android/workspaceDemo/LDNetDiagnoService_Android/library/build/intermediates/ndkBuild/debug/obj/local/mips/libtracepath.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-mips": {
+      "cCompilerExecutable": "/Volumes/work/android/android-ndk-r10e/toolchains/mipsel-linux-android-4.8/prebuilt/darwin-x86_64/bin/mipsel-linux-android-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}
