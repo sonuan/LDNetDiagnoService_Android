@@ -1,0 +1,2 @@
+include ':lDNetDiagnoService_Android'
+include ':lDNetDiagnoServiceDemo_Android'
