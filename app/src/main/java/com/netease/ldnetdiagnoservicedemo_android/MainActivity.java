@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.netease.LDNetDiagnoService.LDNetDiagnoListener;
 import com.netease.LDNetDiagnoService.LDNetDiagnoService;
+import com.sonuan.library.email.EmailBean;
 import com.sonuan.library.email.EmailHandler;
 
 import javax.mail.MessagingException;
@@ -95,10 +96,17 @@ public class MainActivity extends Activity implements OnClickListener,
     });
     try {
       emailHandler.setDebug(true);
-      emailHandler.setProperties("smtp.qq.com", "465", true);
-      emailHandler.setReceivers("wusongyuan@taqu.cn");
-      emailHandler.setMessage("***REMOVED***","【网络诊断】", log);
-      emailHandler.sendEmail("smtp.qq.com", "***REMOVED***", "***REMOVED***");
+      EmailBean emailBean = new EmailBean();
+      emailBean.setHost("smtp.qq.com");
+      emailBean.setPost("465");
+      emailBean.setSSL(true);
+      emailBean.setReceivers("wusongyuan@taqu.cn");
+      emailBean.setFrom("***REMOVED***");
+      emailBean.setSubject("【网络诊断】");
+      emailBean.setContent(log.replace("\n", "<br/>"));
+      emailBean.setAccount("***REMOVED***");
+      emailBean.setPwd("***REMOVED***");
+      emailHandler.sendEmail(emailBean);
     } catch (MessagingException e) {
       e.printStackTrace();
     }
