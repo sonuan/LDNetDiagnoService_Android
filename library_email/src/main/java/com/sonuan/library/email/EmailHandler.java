@@ -28,7 +28,7 @@ import javax.mail.internet.MimeMultipart;
 /**
  * 邮件发送工具，支持添加附件
  * 
- * @author kycq
+ * author
  * 
  */
 public class EmailHandler extends AsyncTask<String, Object, String> {
@@ -100,6 +100,8 @@ public class EmailHandler extends AsyncTask<String, Object, String> {
 	public void setDebug(boolean debug) {
 		if (debug) {
 			mProperties.put("mail.debug", "true");
+		}else{
+			mProperties.put("mail.debug", "false");
 		}
 	}
 
@@ -171,6 +173,16 @@ public class EmailHandler extends AsyncTask<String, Object, String> {
 	 */
 	public void sendEmail(String host, String account, String pwd) {
 		execute(host, account, pwd);
+	}
+
+	public void sendEmail(EmailBean emailBean) throws MessagingException {
+		if (emailBean == null) {
+			return;
+		}
+		setProperties(emailBean.getHost(), emailBean.getPost(), emailBean.isSSL());
+		setReceivers(emailBean.getReceivers());
+		setMessage(emailBean.getFrom(),emailBean.getSubject(), emailBean.getContent());
+		sendEmail(emailBean.getHost(), emailBean.getAccount(), emailBean.getPwd());
 	}
 
 	@Override
