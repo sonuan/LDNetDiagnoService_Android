@@ -101,11 +101,10 @@ public class MainActivity extends Activity implements OnClickListener,
       emailBean.setPost("465");
       emailBean.setSSL(true);
       emailBean.setReceivers("wusongyuan@taqu.cn");
-      emailBean.setFrom("***REMOVED***");
       emailBean.setSubject("【网络诊断】");
       emailBean.setContent(log.replace("\n", "<br/>"));
-      emailBean.setAccount("***REMOVED***");
-      emailBean.setPwd("***REMOVED***");
+      emailBean.setAccount(BuildConfig.EMAIL_USER_NAME);
+      emailBean.setPwd(BuildConfig.EMAIL_USER_PWD);
       emailHandler.sendEmail(emailBean);
     } catch (MessagingException e) {
       e.printStackTrace();
