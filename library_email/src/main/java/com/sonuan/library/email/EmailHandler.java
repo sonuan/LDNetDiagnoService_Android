@@ -181,7 +181,7 @@ public class EmailHandler extends AsyncTask<String, Object, String> {
 		}
 		setProperties(emailBean.getHost(), emailBean.getPost(), emailBean.isSSL());
 		setReceivers(emailBean.getReceivers());
-		setMessage(emailBean.getFrom(),emailBean.getSubject(), emailBean.getContent());
+		setMessage(emailBean.getAccount(),emailBean.getSubject(), emailBean.getContent());
 		sendEmail(emailBean.getHost(), emailBean.getAccount(), emailBean.getPwd());
 	}
 

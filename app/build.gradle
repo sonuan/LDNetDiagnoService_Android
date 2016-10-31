@@ -8,6 +8,8 @@ android {
         applicationId "com.netease.ldnetdiagnoservicedemo_android"
         minSdkVersion 14
         targetSdkVersion 24
+        buildConfigField("String", "EMAIL_USER_NAME", EMAIL_USER_NAME)
+        buildConfigField("String", "EMAIL_USER_PWD", EMAIL_USER_PWD)
     }
 
     buildTypes {
